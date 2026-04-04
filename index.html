@@ -29,11 +29,21 @@
             border-radius: 8px; /* Rounds the corners of the box */
             box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Adds a soft shadow */
         }
+
+        .main-image {
+            max-width: 100%;    /* Ensures the image is never wider than the page */
+            height: auto;       /* Keeps the image proportions correct */
+            display: block;     /* Helps with centering */
+            margin: 20px auto;  /* Centers the image and adds space above/below */
+            border-radius: 10px; /* Optional: rounds the corners of your image */
+        }
     </style>
 </head>
 <body>
 
     <h1>Welcome to Coding 101</h1>
+
+    <img src="banner.jpg" alt="Orcas Swimming" class="main-image">
     
     <p>This is my very first website hosted on GitHub Pages! 
     In this class, we are learning the basics of HTML, 
