@@ -2,66 +2,77 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>My First Webpage</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <title>My First Webpage</title>
     
     <style>
-        /* This is the CSS area where we design the look */
-        
         body {
-            background-color: #f0f8ff; /* A light 'Alice Blue' background */
-            font-family: Arial, sans-serif; /* A cleaner, modern font */
-            color: #333; /* Dark grey text (easier on the eyes than pure black) */
-            line-height: 1.6; /* Adds space between lines of text */
-            padding: 40px; /* Adds space around the edges of the page */
-            max-width: 800px; /* Prevents the text from stretching too wide */
-            margin: 0 auto; /* Centers the whole page on the screen */
+            background-color: #f0f8ff; 
+            font-family: 'Segoe UI', Arial, sans-serif; /* Added 'Segoe UI' for a slightly more modern look */
+            color: #333;
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px; /* Padding for mobile screens */
+        }
+
+        /* We create a "container" to keep everything centered and neat */
+        .container {
+            max-width: 800px;
+            margin: 40px auto; /* Centers the container */
+            background-color: white; /* Makes the content area white */
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05); /* Softer, larger shadow */
         }
 
         h1 {
-            color: #2c3e50; /* A nice navy blue for the heading */
-            border-bottom: 2px solid #2c3e50; /* Adds a line under the heading */
+            color: #2c3e50;
+            border-bottom: 2px solid #3498db; /* Changed line color to match links */
             padding-bottom: 10px;
-        }
-
-        p {
-            background-color: white;
-            padding: 20px;
-            border-radius: 8px; /* Rounds the corners of the box */
-            box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Adds a soft shadow */
+            letter-spacing: 1px; /* Makes the heading look "cleaner" */
+            margin-top: 0; /* Removes extra space at the top */
         }
 
         .main-image {
-            max-width: 100%;    /* Ensures the image is never wider than the page */
-            height: auto;       /* Keeps the image proportions correct */
-            display: block;     /* Helps with centering */
-            margin: 20px auto;  /* Centers the image and adds space above/below */
-            border-radius: 10px; /* Optional: rounds the corners of your image */
+            width: 100%; /* Changed to width 100% to fill the container */
+            height: auto;
+            display: block;
+            margin: 20px 0; /* Space above and below image */
+            border-radius: 10px;
+        }
+
+        p {
+            margin-bottom: 20px;
+            /* Removed the background-color from 'p' since the whole container is now white */
         }
 
         a {
-            color: #3498db; /* A bright blue color */
-            text-decoration: none; /* Removes the default underline */
+            color: #3498db;
+            text-decoration: none;
             font-weight: bold;
+            transition: 0.3s; /* This makes the hover color "fade" in smoothly */
         }
         
         a:hover {
-            color: #2980b9; /* Changes color when you hover over it */
+            color: #1d6fa5;
             text-decoration: underline;
         }
     </style>
 </head>
 <body>
 
-    <h1>Welcome to Coding 101</h1>
+    <div class="container">
 
-    <img src="banner.jpg" alt="Orcas Swimming" class="main-image">
-    
-    <p>This is my very first website hosted on GitHub Pages! 
-    In this class, we are learning the basics of HTML, 
-    how repositories work, and how to share our code with the world.</p>
+        <h1>Welcome to Coding 101</h1>
 
-    <p>Check out my favorite website: 
-       <a href="https://www.fisheries.noaa.gov/species/killer-whale" target="_blank">Click here to find out more about Orca whales!</a>
-    </p>
-</body>
+        <img src="banner.jpg" alt="Orcas Swimming" class="main-image">
+        
+        <p>This is my very first website hosted on GitHub Pages! 
+        In this class, we are learning the basics of HTML, 
+        how repositories work, and how to share our code with the world.</p>
+
+        <p>Check out my favorite website: 
+           <a href="https://www.fisheries.noaa.gov/species/killer-whale" target="_blank">Click here to find out more about Orca whales!</a>
+        </p>
+
+    </div> </body>
 </html>
