@@ -102,7 +102,7 @@ input {
 
 @keyframes fall {
     to {
-        transform: translateY(100vh) rotate(720deg);
+        transform: translateY(100vh) translateX(var(--drift)) rotate(720deg);
         opacity: 0;
     }
 }
