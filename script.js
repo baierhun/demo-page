@@ -63,3 +63,33 @@ document.addEventListener("keydown", function(e) {
         launchConfetti();
     }
 });
+
+function launchConfetti() {
+    for (let i = 0; i < 100; i++) {
+        createConfettiPiece();
+    }
+}
+
+function createConfettiPiece() {
+    const confetti = document.createElement("div");
+    confetti.classList.add("confetti");
+
+    // Random horizontal position
+    confetti.style.left = Math.random() * window.innerWidth + "px";
+
+    // Random color
+    const colors = ["red", "blue", "yellow", "green", "purple"];
+    confetti.style.backgroundColor =
+        colors[Math.floor(Math.random() * colors.length)];
+
+    // Random size
+    confetti.style.width = confetti.style.height =
+        Math.random() * 8 + 4 + "px";
+
+    document.body.appendChild(confetti);
+
+    // Remove after animation
+    setTimeout(() => {
+        confetti.remove();
+    }, 3000);
+}
