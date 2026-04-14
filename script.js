@@ -74,22 +74,31 @@ function createConfettiPiece() {
     const confetti = document.createElement("div");
     confetti.classList.add("confetti");
 
-    // Random horizontal position
+    // RANDOM START POSITION
     confetti.style.left = Math.random() * window.innerWidth + "px";
+    confetti.style.top = Math.random() * -100 + "px"; // staggered start heights
 
-    // Random color
+    // RANDOM COLOR
     const colors = ["red", "blue", "yellow", "green", "purple"];
     confetti.style.backgroundColor =
         colors[Math.floor(Math.random() * colors.length)];
 
-    // Random size
-    confetti.style.width = confetti.style.height =
-        Math.random() * 8 + 4 + "px";
+    // RANDOM SIZE
+    const size = Math.random() * 8 + 4;
+    confetti.style.width = size + "px";
+    confetti.style.height = size + "px";
+
+    // RANDOM FALL DURATION
+    const duration = Math.random() * 2 + 2; // 2–4 seconds
+    confetti.style.animationDuration = duration + "s";
+
+    // RANDOM HORIZONTAL DRIFT
+    const drift = (Math.random() - 0.5) * 200; // left/right movement
+    confetti.style.setProperty("--drift", drift + "px");
 
     document.body.appendChild(confetti);
 
-    // Remove after animation
     setTimeout(() => {
         confetti.remove();
-    }, 3000);
+    }, duration * 1000);
 }
