@@ -38,3 +38,28 @@ function sendMessage() {
             "Thanks, " + name + "! Your message has been sent.";
     }
 }
+
+// KONAMI CODE DETECTION
+const konamiCode = [
+    "ArrowUp","ArrowUp",
+    "ArrowDown","ArrowDown",
+    "ArrowLeft","ArrowRight",
+    "ArrowLeft","ArrowRight",
+    "b","a"
+];
+
+let userInput = [];
+
+document.addEventListener("keydown", function(e) {
+    userInput.push(e.key);
+
+    // Keep array same length as code
+    if (userInput.length > konamiCode.length) {
+        userInput.shift();
+    }
+
+    // Check if matches
+    if (JSON.stringify(userInput) === JSON.stringify(konamiCode)) {
+        launchConfetti();
+    }
+});
