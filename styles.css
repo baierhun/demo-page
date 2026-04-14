@@ -1,0 +1,90 @@
+body {
+    background-color: #f0f8ff; 
+    font-family: 'Segoe UI', Arial, sans-serif;
+    color: #333;
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* NAVBAR */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 30px;
+    background: #3498db;
+    color: white;
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+}
+
+/* CONTAINER */
+.container {
+    max-width: 800px;
+    margin: 40px auto;
+    background-color: white;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+}
+
+/* HEADINGS */
+h1 {
+    color: #2c3e50;
+    border-bottom: 2px solid #3498db;
+    padding-bottom: 10px;
+}
+
+/* IMAGES */
+.main-image {
+    width: 100%;
+    border-radius: 10px;
+    margin: 20px 0;
+}
+
+/* LINKS */
+a {
+    color: #3498db;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+a:hover {
+    color: #1d6fa5;
+    text-decoration: underline;
+}
+
+/* BUTTONS */
+.btn {
+    padding: 10px 15px;
+    margin-top: 10px;
+    background: #3498db;
+    border: none;
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.btn.secondary {
+    background: #2c3e50;
+}
+
+/* INPUT */
+input {
+    padding: 10px;
+    margin-top: 10px;
+}
+
+/* DARK MODE */
+.dark-mode {
+    background-color: #1e293b;
+    color: white;
+}
