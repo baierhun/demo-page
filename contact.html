@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact</title>
+
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<nav class="navbar">
+    <h2>My Site</h2>
+    <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="contact.html">Contact</a></li>
+    </ul>
+</nav>
+
+<div class="container">
+
+    <h1>Contact Me</h1>
+
+    <section>
+        <h2>Send a Message</h2>
+
+        <input type="text" id="contactName" placeholder="Your name"><br><br>
+        <input type="text" id="contactMessage" placeholder="Your message"><br><br>
+
+        <button onclick="sendMessage()" class="btn">Send</button>
+
+        <p id="response"></p>
+    </section>
+
+    <section>
+        <h2>Other Ways to Reach Me</h2>
+        <ul>
+            <li>Email: example@email.com</li>
+            <li>GitHub: yourusername</li>
+        </ul>
+    </section>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
