@@ -19,3 +19,22 @@ function greetUser() {
 function toggleTheme() {
     document.body.classList.toggle("dark-mode");
 }
+
+// PROJECT BUTTON ALERT
+function projectAlert(projectName) {
+    alert("You clicked on " + projectName + "!");
+}
+
+// CONTACT FORM
+function sendMessage() {
+    let name = document.getElementById("contactName").value;
+    let message = document.getElementById("contactMessage").value;
+
+    if (name === "" || message === "") {
+        document.getElementById("response").textContent =
+            "Please fill out all fields.";
+    } else {
+        document.getElementById("response").textContent =
+            "Thanks, " + name + "! Your message has been sent.";
+    }
+}
