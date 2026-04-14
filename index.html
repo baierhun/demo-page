@@ -2,76 +2,80 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <title>My First Webpage</title>
-    
-    <style>
-        body {
-            background-color: #f0f8ff; 
-            font-family: 'Segoe UI', Arial, sans-serif; /* Added 'Segoe UI' for a slightly more modern look */
-            color: #333;
-            line-height: 1.6;
-            margin: 0;
-            padding: 20px; /* Padding for mobile screens */
-        }
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mr. Baier's Website</title>
 
-        /* We create a "container" to keep everything centered and neat */
-        .container {
-            max-width: 800px;
-            margin: 40px auto; /* Centers the container */
-            background-color: white; /* Makes the content area white */
-            padding: 40px;
-            border-radius: 15px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.05); /* Softer, larger shadow */
-        }
-
-        h1 {
-            color: #2c3e50;
-            border-bottom: 2px solid #3498db; /* Changed line color to match links */
-            padding-bottom: 10px;
-            letter-spacing: 1px; /* Makes the heading look "cleaner" */
-            margin-top: 0; /* Removes extra space at the top */
-        }
-
-        .main-image {
-            width: 100%; /* Changed to width 100% to fill the container */
-            height: auto;
-            display: block;
-            margin: 20px 0; /* Space above and below image */
-            border-radius: 10px;
-        }
-
-        p {
-            margin-bottom: 20px;
-            /* Removed the background-color from 'p' since the whole container is now white */
-        }
-
-        a {
-            color: #3498db;
-            text-decoration: none;
-            font-weight: bold;
-            transition: 0.3s; /* This makes the hover color "fade" in smoothly */
-        }
-        
-        a:hover {
-            color: #1d6fa5;
-            text-decoration: underline;
-        }
-    </style>
+    <!-- CSS -->
+    <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
 
-    <div class="container">
+<!-- NAVBAR -->
+<nav class="navbar">
+    <h2>My Site</h2>
+    <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Projects</a></li>
+        <li><a href="#">Contact</a></li>
+    </ul>
+</nav>
 
-        <h1>Mr. Baier's Awesome Website</h1>
-        
-        <img src="banner.jpg" alt="Orcas Swimming" class="main-image">
-        <p>This is my very first website hosted on GitHub Pages! 
+<div class="container">
+
+    <h1>Mr. Baier's Awesome Website</h1>
+    
+    <img src="banner.jpg" alt="Orcas Swimming" class="main-image">
+
+    <p id="intro-text">
+        This is my very first website hosted on GitHub Pages! 
         In this class, we are learning the basics of HTML, 
-        how repositories work, and how to share our code with the world.</p>
+        how repositories work, and how to share our code with the world.
+    </p>
 
-        <p>Check out my favorite website: 
-           <a href="https://www.fisheries.noaa.gov/species/killer-whale" target="_blank">Click here to find out more about Orca whales!</a>
-        </p>
+    <button onclick="changeText()" class="btn">Change Text</button>
 
-    </div> </body>
+    <!-- LIST SECTION -->
+    <section>
+        <h2>My Favorite Activities</h2>
+        <ul>
+            <li>Fishing</li>
+            <li>Coaching</li>
+            <li>Watching sports</li>
+            <li>Traveling</li>
+        </ul>
+    </section>
+
+    <!-- SECOND IMAGE -->
+    <section>
+        <h2>Another Cool Image</h2>
+        <img src="orca2.jpg" alt="Orca jumping" class="main-image">
+    </section>
+
+    <!-- LINK -->
+    <p>
+        Check out my favorite website: 
+        <a href="https://www.fisheries.noaa.gov/species/killer-whale" target="_blank">
+            Learn about Orca whales
+        </a>
+    </p>
+
+    <!-- INPUT SECTION -->
+    <section>
+        <h2>Say Hello</h2>
+
+        <input type="text" id="nameInput" placeholder="Enter your name">
+        <button onclick="greetUser()" class="btn">Submit</button>
+
+        <p id="greeting"></p>
+    </section>
+
+    <!-- THEME BUTTON -->
+    <button onclick="toggleTheme()" class="btn secondary">Toggle Theme</button>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
 </html>
